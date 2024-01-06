@@ -1,0 +1,12 @@
+body {
+    background-image: url(../images/chango-torero.gif);
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+table {
+    display: block
+}

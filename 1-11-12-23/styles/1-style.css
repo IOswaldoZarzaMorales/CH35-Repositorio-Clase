@@ -1,0 +1,21 @@
+
+p {
+    background-color: blue;
+}
+
+.parrafo4 {
+    background-image: url(../../../CoderHouse/DesarrolloWeb/2-pre-entrega-zarza-morales/images/galeria-galeria14.jpeg);
+    font-size: 30px;
+} 
+
+.caja {
+    background-color: darkgreen;
+}
+
+.titulos {
+    background-color: purple;
+} 
+
+#especial {
+    background-color: cyan;
+}

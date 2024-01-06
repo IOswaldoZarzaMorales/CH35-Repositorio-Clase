@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Estilos generales */
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    /* --nombre-variable */
+    /* --font-primary: 'Poppins', sans-serif; */
+    --color-primary: #A60311;
+    --color-secondary: #D9042B;
+    --color-text-primary: #D9CCB4;
+    --color-text-secondary: #D98E04;
+    --color-background: #590219;
+    --color-light: #F2F2F2;
+    --color-dark: #070C26;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-light);
+}
+
+.position {
+    background-color: var(--color-dark);
+    width: 100px;
+    height: 100px;
+    /* margin: 20px; */
+    text-align: center;
+}
+
+.static {
+    position: static;
+    margin: 20px;
+    background-color: var(--color-text-secondary);
+}
+
+.absolute {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.ancestro {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-dark);
+    border: solid 2px var(--color-dark);
+}
+
+
+.fixed {
+    position: fixed;
+    margin-left: 300px;
+    margin-top: 1px;
+    background-color:var(--color-text-primary) ;
+}
+
+.chat {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.chat a img {
+    width: 100%;
+    height: 100%;
+}
+
+.relative {
+    position: relative;
+    margin-top: 5000px;
+    margin-left: 300px;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
+
+.display-inline {
+    display: inline;
+    width: 150px;
+    height: 150px;
+    background-color: #070C26;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.displa {
+    display: block;
+}
+
+.block {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #070C26;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+

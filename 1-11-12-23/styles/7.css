@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Estilos generales */
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+:root {
+    /* --nombre-variable */
+    /* --font-primary: 'Poppins', sans-serif; */
+    --color-primary: #A60311;
+    --color-secondary: #D9042B;
+    --color-text-primary: #D9CCB4;
+    --color-text-secondary: #D98E04;
+    --color-background: #590219;
+    --color-light: #F2F2F2;
+    --color-dark: #070C26;
+}
+/* 
+Display flex. Me permite trabajar de manera flexible con elementos anidados dentro de un ancestro. El flexbox se aplica en el container y tiene efecto sobre los hijos.
+Por default, la dirección de flex es en filas (row).
+Vamos a poder acceder a diversas propiedades para modificar el comportamiento de los elementos.
+    > - flex-direction: column, column-reverse, row, row-reverse */
+
+.container {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    /* flex-wrap: nowrap; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 350px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color-text-secondary);
+}
+
+.display-flex {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    background-color: var(--color-dark);
+    border-radius: 6px;
+    color: white;
+}
+
+#spe {
+    display: flex;
+    align-items: center;
+    /* justify-content: center;/////////// */
+}

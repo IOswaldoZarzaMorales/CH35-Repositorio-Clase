@@ -1,0 +1,12 @@
+
+*{
+    margin: 0px;
+    padding:  0px;
+}
+
+.caja {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}

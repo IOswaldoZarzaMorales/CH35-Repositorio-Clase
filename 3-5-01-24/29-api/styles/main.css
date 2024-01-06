@@ -1,0 +1,32 @@
+body {
+    background-color: #3f73a5;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 2px solid #6666;
+    box-shadow: #6666 0px 2px 5px -1px;
+}
+
+button:hover {
+    background-color: rgb(215, 124, 12);
+    color: #fff;
+    border: none;
+}
+
+#store {
+    display: flex;
+    flex-direction: column;
+   /*  justify-content: center; */
+    align-items: center;
+}
