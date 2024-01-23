@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Canvas</title>
+</head>
+<body>
+
+<canvas width="500" height="500"  id="mioCanvas" style="border: solid"></canvas>
+<script>
+  var mioCanvas = document.getElementById("mioCanvas");
+  var context = mioCanvas.getContext("2d");
+  //creo il gradiente
+ var gradienteRadiale = context.createRadialGradient(250,250, 50, 250,250, 190);
+  //definisco i colori del gradiente
+  gradienteRadiale.addColorStop(0, 'red');
+  gradienteRadiale.addColorStop(0.5, 'blue');
+  gradienteRadiale.addColorStop(0.8, 'green');
+  // definisco il gradiente come riempimento
+  context.fillStyle = gradienteRadiale;
+  //disegno una forma e la riempio
+  context.strokeStyle="#0000ff";
+  context.beginPath();
+  context.arc(250,250,200,0,Math.PI*2,true);
+  context.stroke();
+  context.fill();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

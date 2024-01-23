@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Geolocalizzazione</title>
+<script>
+//script javascript interno
+navigator.geolocation.getCurrentPosition(localizzami,gestioneErrore);
+var latitudine;
+var longitudine;
+var altitudine;
+function localizzami (posizione){
+  latitudine=posizione.coords.latitude;
+  longitudine= posizione.coords.longitude;
+  document.getElementById("mappa").src = 'http://maps.google.it/maps?hl=it&ie=UTF8&q=' + posizione.coords.latitude + ',' + posizione.coords.longitude +  '&z=17&output=embed'; 
+}
+function gestioneErrore(errore){
+  if(errore.code==1){
+    alert ("dato che non hai permesso l'invio delle informazioni, non so dirti dove sei");
+  } else if (errore.code==2) {
+    alert("non riesco a recuperare e inviare le informazioni necessarie");
+  } else {
+    alert ("si è verificato un errore imprevisto");
+ }
+}
+</script>
+<style>
+#mappa {
+width:500px;
+height:500px;
+}
+
+</style>
+</head>
+<body>
+<iframe id="mappa"></iframe>
+ciao
+</body>
+</html>

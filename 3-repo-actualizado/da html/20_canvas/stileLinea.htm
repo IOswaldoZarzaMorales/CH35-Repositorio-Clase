@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Canvas</title>
+</head>
+<body>
+
+<canvas width="500" height="500"  id="mioCanvas" style="border: solid"></canvas>
+<script>
+  var mioCanvas = document.getElementById("mioCanvas");
+  var context = mioCanvas.getContext("2d");
+  context.lineWidth="12";
+  context.lineCap="round";
+  context.beginPath();
+  context.moveTo(200,300);
+  context.bezierCurveTo(240,180,185,85,400,300);
+  context.stroke();
+
+  context.beginPath();
+  context.lineCap="square";
+  context.moveTo(200,60);
+  context.lineTo(300,60);
+  context.stroke();
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

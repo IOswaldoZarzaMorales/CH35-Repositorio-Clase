@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Geolocalizzazione</title>
+<script>
+//script javascript interno
+navigator.geolocation.getCurrentPosition(localizzami,gestioneErrore);
+var latitudine;
+var longitudine;
+var altitudine;
+function localizzami (posizione){
+  latitudine=posizione.coords.latitude;
+  longitudine= posizione.coords.longitude;
+  alert ('Latitudine: ' + latitudine + ', longitudine: ' + longitudine);
+}
+function gestioneErrore(errore){
+if(errore.code==1){
+alert ("dato che non hai permesso l'invio delle informazioni, non so dirti dove sei");
+} else if (errore.code==2) {
+alert("non riesco a recuperare e inviare le informazioni necessarie");
+} else {
+alert ("si è verificato un errore imprevisto");
+}
+}
+</script>
+</head>
+<body>
+ciao
+</body>
+</html>

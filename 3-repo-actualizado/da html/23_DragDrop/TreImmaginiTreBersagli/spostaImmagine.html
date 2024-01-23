@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Drag and drop</title>
+<style>
+#bersaglioCoccinella, #bersaglioFarfalla, #bersaglioApe{
+width:211px;
+height:207px;
+border:thin solid black;
+background-color:#ff3;
+position:absolute;
+top: 210px;
+}
+#bersaglioCoccinella{
+left:226px;
+}
+#bersaglioApe{
+left:441px;
+}
+#elenco{
+width:207px;
+height:207px;
+border:thin solid black;
+position:absolute;
+top: 210px;
+left:660px;
+}
+#vittoria {
+color:red;
+font-size:20pt;
+position:absolute;
+top: 450px;
+visibility:hidden;
+}
+img {
+cursor:move;
+padding:10px;
+-moz-user-select:none;
+}
+</style>
+
+<script>
+var immagine
+var bersaglio
+var punti=0;
+function iniziaDrag(event){
+  immagine = event.target.getAttribute("id");
+}
+function DragOver(event){
+
+  event.preventDefault()
+}
+function Enter(event){
+event.target.style.background="#ff9";
+
+}
+function Leave(event){
+event.target.style.background="#ff3";
+}
+function Drop(event){
+if ((event.target.id == "bersaglioFarfalla" && immagine == "farfalla") || (event.target.id == "bersaglioCoccinella" && immagine == "coccinella") || (event.target.id == "bersaglioApe" && immagine == "ape")) {
+
+  
+    event.target.innerHTML = ""
+    event.target.appendChild(document.getElementById(immagine));
+    document.getElementById(immagine).draggable=false;
+    document.getElementById("elenco").innerHTML = document.getElementById("elenco").innerHTML + "<br>" + immagine;
+    event.target.style.background="#0f0";
+    punti+=1;
+    if(punti==3){
+      //alert("vittoria");
+      document.getElementById("vittoria").style.visibility="visible";
+    }
+    } else{
+    alert("questa immagine non deve essere trascinata qui");
+    event.target.style.background="#ff3";
+    }
+   event.preventDefault()
+   event.stopPropagation();
+  return false;
+}
+</script>
+</head>
+<body>
+<img src="farfalla.gif" draggable="true" id="farfalla" ondragstart="iniziaDrag(event)"/>
+<img src="coccinella.gif" draggable="true" id="coccinella" ondragstart="iniziaDrag(event)"/>
+<img src="ape.gif" draggable="true" id="ape" ondragstart="iniziaDrag(event)"/>
+<div id="bersaglioFarfalla" ondragover="DragOver(event)"  ondrop="Drop(event)" ondragenter="Enter(event)" ondragleave="Leave(event)">Farfalla</div>
+<div id="bersaglioCoccinella" ondragover="DragOver(event)"  ondrop="Drop(event)" ondragenter="Enter(event)" ondragleave="Leave(event)">Coccinella</div>
+<div id="bersaglioApe" ondragover="DragOver(event)"  ondrop="Drop(event)" ondragenter="Enter(event)" ondragleave="Leave(event)">Ape</div>
+<div id="elenco">Ordine di trascinamento:</div>
+<div id="vittoria">HAI VINTO!!!!</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Canvas</title>
+</head>
+<body>
+
+<canvas width="500" height="500"  id="mioCanvas" style="border: solid"></canvas>
+<script>
+  var mioCanvas = document.getElementById("mioCanvas");
+  var context = mioCanvas.getContext("2d");
+  //creo il gradiente
+  var gradienteLineare = context.createLinearGradient(250,0,250,500);
+
+  //definisco i colori del gradiente
+  gradienteLineare.addColorStop(0, 'red');
+  gradienteLineare.addColorStop(0.5, 'blue');
+  gradienteLineare.addColorStop(0.8, 'green');
+
+  // definisco il gradiente come riempimento
+  context.fillStyle = gradienteLineare;
+
+  context.strokeStyle="#0000ff";
+  context.beginPath();
+  context.arc(250,250,200,0,Math.PI*2,true);
+  context.stroke();
+  context.fill();
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

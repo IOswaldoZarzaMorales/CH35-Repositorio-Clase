@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Geolocalizzazione</title>
+<script>
+//script javascript interno
+navigator.geolocation.getCurrentPosition(localizzami);
+var latitudine;
+var longitudine;
+function localizzami (posizione){
+  latitudine=posizione.coords.latitude;
+  longitudine= posizione.coords.longitude;
+  alert ('Latitudine: ' + latitudine + ', longitudine: ' + longitudine);
+}
+</script>
+</head>
+<body>
+ciao
+</body>
+</html>
