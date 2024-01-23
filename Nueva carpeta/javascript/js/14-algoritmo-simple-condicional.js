@@ -55,3 +55,4 @@ let texto = prompt ('Ingresa un texto a repetir');
 for(let i=0; i<cantidad; i++){console.log(texto);}
 
 console.log('Espero haberlos iluminado. Gracias, vuelvan pronto!')
+
